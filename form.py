@@ -10,3 +10,9 @@ class BookForm(FlaskForm):
     rating = FloatField('Rating',
                         validators=[DataRequired(), NumberRange(min=1, max=10, message="value must be from 1 to 10")])
     submit = SubmitField('Add')
+
+
+class RatingForm(FlaskForm):
+    rating = FloatField('Rating',
+                        validators=[DataRequired(), NumberRange(min=1, max=10, message="value must be from 1 to 10")])
+    submit = SubmitField('Change Rating')
